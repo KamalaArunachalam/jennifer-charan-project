@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,6 +19,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;display=swap">
 <style>
 body{margin:0;background:#F5EBDD}
+@keyframes jcfade{from{opacity:.25}to{opacity:1}}
+.jc-fade{animation:jcfade .6s ease}
+[data-img]{-webkit-user-drag:none;user-select:none}
 .fl{position:absolute!important;z-index:0!important;pointer-events:none;height:auto;user-select:none}
 @media (max-width:900px){.fl-wide{display:none}}
 @media (max-width:600px){.fl-mid{display:none}}
@@ -61,7 +65,6 @@ img{max-width:100%}
 #top a[data-act]{margin-top:14px!important;min-height:46px!important;padding:0 24px!important;font-size:16px!important}
 .hint{font-size:13px!important;max-width:240px}
 .archwrap{width:90vw!important;padding:62px 16px 34px!important;gap:10px!important}
-#hero-dots{order:-1;flex-basis:100%;justify-content:center}
 }
 </style>
 
@@ -78,7 +81,7 @@ img{max-width:100%}
 <a href="#her" style="min-height: 44px; padding: 0 10px; display: flex; align-items: center; font-size: 17px; text-decoration: none">Jennifer</a>
 <a href="#his" style="min-height: 44px; padding: 0 10px; display: flex; align-items: center; font-size: 17px; text-decoration: none">Charan</a>
 <a href="#together" style="min-height: 44px; padding: 0 10px; display: flex; align-items: center; font-size: 17px; text-decoration: none">Together</a>
-<button type="button" data-act="toggleMusic" style="min-height: 44px; padding: 0 16px; border: 1px solid #7A2E26; border-radius: 999px; background: transparent; color: #7A2E26; font-family: inherit; font-size: 16px"><span data-v="musicText"></span></button>
+
 </nav>
 </header>
 
@@ -97,19 +100,13 @@ img{max-width:100%}
 </figure>
 </section>
 
-<div aria-hidden="true" style="display: flex; align-items: center; justify-content: center; gap: 14px; max-width: 520px; margin: 0 auto; padding: 0 30px"><span style="flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #B4733C)"></span><svg width="150" height="56" viewBox="0 0 150 56"><g fill="none" stroke="#9C6B45" stroke-width="1.4"><path d="M5 30 C40 20 60 36 75 28 C90 20 110 36 145 26"/></g><g fill="#9DA88A" opacity="0.85"><ellipse cx="38" cy="22" rx="12" ry="5" transform="rotate(-20 38 22)"/><ellipse cx="112" cy="36" rx="12" ry="5" transform="rotate(-20 112 36)"/><ellipse cx="55" cy="38" rx="10" ry="4" transform="rotate(25 55 38)"/><ellipse cx="96" cy="20" rx="10" ry="4" transform="rotate(25 96 20)"/></g><g transform="translate(75 28) scale(0.7)"><g fill="#E7B3A3" opacity="0.9"><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(0)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(72)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(144)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(216)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(288)"/></g><g fill="#D4877A" opacity="0.8"><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(36)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(108)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(180)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(252)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(324)"/></g><circle r="5" fill="#8C3B2E"/></g><g transform="translate(22 28) scale(0.38)"><g fill="#C97A4F" opacity="0.9"><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(0)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(72)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(144)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(216)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(288)"/></g><circle r="5" fill="#7A2E26"/></g><g transform="translate(128 28) scale(0.38)"><g fill="#C97A4F" opacity="0.9"><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(0)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(72)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(144)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(216)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(288)"/></g><circle r="5" fill="#7A2E26"/></g><g fill="#F2DDC4" stroke="#C9A27E" stroke-width="0.7"><circle cx="8" cy="30" r="3"/><circle cx="142" cy="26" r="3"/></g></svg><span style="flex: 1; height: 1px; background: linear-gradient(90deg, #B4733C, transparent)"></span></div>
+<div aria-hidden="true" style="display: flex; align-items: center; justify-content: center; gap: 14px; max-width: 520px; margin: 0 auto; padding: 0 30px"><span style="flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #B4733C)"></span><svg width="150" height="56" viewBox="0 0 150 56"><g fill="none" stroke="#8C5A33" stroke-width="1.3" stroke-linecap="round"><path d="M6 30 C40 22 60 34 75 29 C90 24 110 34 144 27"/></g><path transform="translate(18 27) rotate(-150)" fill="#A39B74" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(26 26) rotate(155)" fill="#7F7E5C" d="M0 0 C 3.2 -5.5, 9.8 -5.5, 13 0 C 9.8 3.8, 3.2 3.8, 0 0Z"/><path transform="translate(36 25) rotate(-145)" fill="#B97A3B" d="M0 0 C 4.2 -7.1, 12.8 -7.1, 17 0 C 12.8 5.0, 4.2 5.0, 0 0Z"/><path transform="translate(46 27) rotate(150)" fill="#9C4A2C" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(56 31) rotate(-160)" fill="#CFA56B" d="M0 0 C 3.5 -5.9, 10.5 -5.9, 14 0 C 10.5 4.1, 3.5 4.1, 0 0Z"/><path transform="translate(132 28) rotate(-30)" fill="#A39B74" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(124 29) rotate(25)" fill="#7F7E5C" d="M0 0 C 3.2 -5.5, 9.8 -5.5, 13 0 C 9.8 3.8, 3.2 3.8, 0 0Z"/><path transform="translate(114 30) rotate(-35)" fill="#B97A3B" d="M0 0 C 4.2 -7.1, 12.8 -7.1, 17 0 C 12.8 5.0, 4.2 5.0, 0 0Z"/><path transform="translate(104 29) rotate(30)" fill="#9C4A2C" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(94 27) rotate(-20)" fill="#CFA56B" d="M0 0 C 3.5 -5.9, 10.5 -5.9, 14 0 C 10.5 4.1, 3.5 4.1, 0 0Z"/><path transform="translate(75 30) rotate(-150)" fill="#B97A3B" d="M0 0 C 5.5 -7.9, 16.5 -7.9, 22 0 C 16.5 5.5, 5.5 5.5, 0 0Z"/><path transform="translate(75 30) rotate(-120)" fill="#9C4A2C" d="M0 0 C 6.0 -8.6, 18.0 -8.6, 24 0 C 18.0 6.0, 6.0 6.0, 0 0Z"/><path transform="translate(75 30) rotate(-90)" fill="#7F7E5C" d="M0 0 C 6.5 -9.4, 19.5 -9.4, 26 0 C 19.5 6.6, 6.5 6.6, 0 0Z"/><path transform="translate(75 30) rotate(-60)" fill="#9C4A2C" d="M0 0 C 6.0 -8.6, 18.0 -8.6, 24 0 C 18.0 6.0, 6.0 6.0, 0 0Z"/><path transform="translate(75 30) rotate(-30)" fill="#B97A3B" d="M0 0 C 5.5 -7.9, 16.5 -7.9, 22 0 C 16.5 5.5, 5.5 5.5, 0 0Z"/><path transform="translate(75 30) rotate(-165)" fill="#CFA56B" d="M0 0 C 4.0 -5.8, 12.0 -5.8, 16 0 C 12.0 4.0, 4.0 4.0, 0 0Z"/><path transform="translate(75 30) rotate(-15)" fill="#CFA56B" d="M0 0 C 4.0 -5.8, 12.0 -5.8, 16 0 C 12.0 4.0, 4.0 4.0, 0 0Z"/><g fill="#8E3B22"><circle cx="66" cy="33" r="2.3"/><circle cx="84" cy="33" r="2.3"/><circle cx="62" cy="36" r="1.8"/><circle cx="88" cy="36" r="1.8"/></g></svg><span style="flex: 1; height: 1px; background: linear-gradient(90deg, #B4733C, transparent)"></span></div>
 <section id="moments" style="position: relative; padding: 48px 20px; display: flex; flex-direction: column; align-items: center; gap: 16px">
 <img class="fl fl-s" src="fl-d-l.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" style="left: 0; top: -20px; width: 150px">
 <h2 style="margin: 0; font-family: 'Great Vibes', cursive; font-weight: 400; font-size: 52px; color: #7A2E26">Moments</h2>
 <p style="margin: -6px 0 10px; font-size: 17px; font-style: italic; color: #6B4A36">little pieces of a big love story</p>
 <div style="width: 100%; max-width: 1000px; display: flex; flex-direction: column; gap: 14px; align-items: center">
 <div class="taped"><img data-img="hero" src="" alt="" style="width: 100%; aspect-ratio: 16 / 10; box-sizing: border-box; border: 10px solid #FFFAF2; box-shadow: 0 8px 22px rgba(74,52,38,0.18); display: block; object-fit: cover; background: #E8D7C1"></div>
-<div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center">
-<button type="button" data-act="hero.prev" aria-label="Previous photo" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #7A2E26; background: transparent; color: #7A2E26; font-size: 24px">‹</button>
-<div id="hero-dots" style="display: flex; gap: 2px"></div>
-<button type="button" data-act="hero.next" aria-label="Next photo" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #7A2E26; background: transparent; color: #7A2E26; font-size: 24px">›</button>
-<button type="button" data-act="toggleAuto" style="min-height: 44px; padding: 0 16px; border: 0; background: transparent; color: #7A2E26; font-family: inherit; font-size: 16px; text-decoration: underline"><span data-v="autoText"></span></button>
-</div>
 </div>
 </section>
 
@@ -119,7 +116,6 @@ img{max-width:100%}
 <div style="width: 100%; max-width: 1100px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start">
 <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px; align-items: center">
 <div class="cornered"><img data-img="her" src="" alt="" style="width: 100%; max-width: 440px; aspect-ratio: 4 / 5; box-sizing: border-box; border: 8px solid #FFFAF2; box-shadow: 0 6px 18px rgba(74,52,38,0.16); display: block; object-fit: cover; background: #E8D7C1"></div>
-<div style="display: flex; align-items: center; gap: 14px"><button type="button" data-act="her.prev" aria-label="Previous photo of Jennifer" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #7A2E26; background: transparent; color: #7A2E26; font-size: 22px">‹</button><span style="font-size: 16px; letter-spacing: 2px"><span data-v="her.pos"></span></span><button type="button" data-act="her.next" aria-label="Next photo of Jennifer" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #7A2E26; background: transparent; color: #7A2E26; font-size: 22px">›</button></div>
 </div>
 <article style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
 <p style="margin: 0; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: #6B4A36">Her story</p>
@@ -148,7 +144,7 @@ img{max-width:100%}
 </div>
 </section>
 
-<div aria-hidden="true" style="display: flex; align-items: center; justify-content: center; gap: 14px; max-width: 520px; margin: 0 auto; padding: 0 30px"><span style="flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #B4733C)"></span><svg width="150" height="56" viewBox="0 0 150 56"><g fill="none" stroke="#9C6B45" stroke-width="1.4"><path d="M5 30 C40 20 60 36 75 28 C90 20 110 36 145 26"/></g><g fill="#9DA88A" opacity="0.85"><ellipse cx="38" cy="22" rx="12" ry="5" transform="rotate(-20 38 22)"/><ellipse cx="112" cy="36" rx="12" ry="5" transform="rotate(-20 112 36)"/><ellipse cx="55" cy="38" rx="10" ry="4" transform="rotate(25 55 38)"/><ellipse cx="96" cy="20" rx="10" ry="4" transform="rotate(25 96 20)"/></g><g transform="translate(75 28) scale(0.7)"><g fill="#E7B3A3" opacity="0.9"><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(0)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(72)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(144)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(216)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(288)"/></g><g fill="#D4877A" opacity="0.8"><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(36)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(108)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(180)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(252)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(324)"/></g><circle r="5" fill="#8C3B2E"/></g><g transform="translate(22 28) scale(0.38)"><g fill="#C97A4F" opacity="0.9"><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(0)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(72)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(144)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(216)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(288)"/></g><circle r="5" fill="#7A2E26"/></g><g transform="translate(128 28) scale(0.38)"><g fill="#C97A4F" opacity="0.9"><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(0)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(72)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(144)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(216)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(288)"/></g><circle r="5" fill="#7A2E26"/></g><g fill="#F2DDC4" stroke="#C9A27E" stroke-width="0.7"><circle cx="8" cy="30" r="3"/><circle cx="142" cy="26" r="3"/></g></svg><span style="flex: 1; height: 1px; background: linear-gradient(90deg, #B4733C, transparent)"></span></div>
+<div aria-hidden="true" style="display: flex; align-items: center; justify-content: center; gap: 14px; max-width: 520px; margin: 0 auto; padding: 0 30px"><span style="flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #B4733C)"></span><svg width="150" height="56" viewBox="0 0 150 56"><g fill="none" stroke="#8C5A33" stroke-width="1.3" stroke-linecap="round"><path d="M6 30 C40 22 60 34 75 29 C90 24 110 34 144 27"/></g><path transform="translate(18 27) rotate(-150)" fill="#A39B74" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(26 26) rotate(155)" fill="#7F7E5C" d="M0 0 C 3.2 -5.5, 9.8 -5.5, 13 0 C 9.8 3.8, 3.2 3.8, 0 0Z"/><path transform="translate(36 25) rotate(-145)" fill="#B97A3B" d="M0 0 C 4.2 -7.1, 12.8 -7.1, 17 0 C 12.8 5.0, 4.2 5.0, 0 0Z"/><path transform="translate(46 27) rotate(150)" fill="#9C4A2C" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(56 31) rotate(-160)" fill="#CFA56B" d="M0 0 C 3.5 -5.9, 10.5 -5.9, 14 0 C 10.5 4.1, 3.5 4.1, 0 0Z"/><path transform="translate(132 28) rotate(-30)" fill="#A39B74" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(124 29) rotate(25)" fill="#7F7E5C" d="M0 0 C 3.2 -5.5, 9.8 -5.5, 13 0 C 9.8 3.8, 3.2 3.8, 0 0Z"/><path transform="translate(114 30) rotate(-35)" fill="#B97A3B" d="M0 0 C 4.2 -7.1, 12.8 -7.1, 17 0 C 12.8 5.0, 4.2 5.0, 0 0Z"/><path transform="translate(104 29) rotate(30)" fill="#9C4A2C" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(94 27) rotate(-20)" fill="#CFA56B" d="M0 0 C 3.5 -5.9, 10.5 -5.9, 14 0 C 10.5 4.1, 3.5 4.1, 0 0Z"/><path transform="translate(75 30) rotate(-150)" fill="#B97A3B" d="M0 0 C 5.5 -7.9, 16.5 -7.9, 22 0 C 16.5 5.5, 5.5 5.5, 0 0Z"/><path transform="translate(75 30) rotate(-120)" fill="#9C4A2C" d="M0 0 C 6.0 -8.6, 18.0 -8.6, 24 0 C 18.0 6.0, 6.0 6.0, 0 0Z"/><path transform="translate(75 30) rotate(-90)" fill="#7F7E5C" d="M0 0 C 6.5 -9.4, 19.5 -9.4, 26 0 C 19.5 6.6, 6.5 6.6, 0 0Z"/><path transform="translate(75 30) rotate(-60)" fill="#9C4A2C" d="M0 0 C 6.0 -8.6, 18.0 -8.6, 24 0 C 18.0 6.0, 6.0 6.0, 0 0Z"/><path transform="translate(75 30) rotate(-30)" fill="#B97A3B" d="M0 0 C 5.5 -7.9, 16.5 -7.9, 22 0 C 16.5 5.5, 5.5 5.5, 0 0Z"/><path transform="translate(75 30) rotate(-165)" fill="#CFA56B" d="M0 0 C 4.0 -5.8, 12.0 -5.8, 16 0 C 12.0 4.0, 4.0 4.0, 0 0Z"/><path transform="translate(75 30) rotate(-15)" fill="#CFA56B" d="M0 0 C 4.0 -5.8, 12.0 -5.8, 16 0 C 12.0 4.0, 4.0 4.0, 0 0Z"/><g fill="#8E3B22"><circle cx="66" cy="33" r="2.3"/><circle cx="84" cy="33" r="2.3"/><circle cx="62" cy="36" r="1.8"/><circle cx="88" cy="36" r="1.8"/></g></svg><span style="flex: 1; height: 1px; background: linear-gradient(90deg, #B4733C, transparent)"></span></div>
 
 <section id="his" style="position: relative; padding: 48px 20px; display: flex; justify-content: center">
 <img class="fl fl-mid" src="fl-a-r.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" style="right: 0; top: 130px; width: 230px">
@@ -170,22 +166,43 @@ img{max-width:100%}
 </article>
 <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 12px; align-items: center">
 <div class="cornered"><img data-img="his" src="" alt="" style="width: 100%; max-width: 440px; aspect-ratio: 4 / 5; box-sizing: border-box; border: 8px solid #FFFAF2; box-shadow: 0 6px 18px rgba(74,52,38,0.16); display: block; object-fit: cover; background: #E8D7C1"></div>
-<div style="display: flex; align-items: center; gap: 14px"><button type="button" data-act="his.prev" aria-label="Previous photo of Charan" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #7A2E26; background: transparent; color: #7A2E26; font-size: 22px">‹</button><span style="font-size: 16px; letter-spacing: 2px"><span data-v="his.pos"></span></span><button type="button" data-act="his.next" aria-label="Next photo of Charan" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #7A2E26; background: transparent; color: #7A2E26; font-size: 22px">›</button></div>
 </div>
 </div>
 </section>
 
-<div aria-hidden="true" style="display: flex; align-items: center; justify-content: center; gap: 14px; max-width: 520px; margin: 0 auto; padding: 0 30px"><span style="flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #B4733C)"></span><svg width="150" height="56" viewBox="0 0 150 56"><g fill="none" stroke="#9C6B45" stroke-width="1.4"><path d="M5 30 C40 20 60 36 75 28 C90 20 110 36 145 26"/></g><g fill="#9DA88A" opacity="0.85"><ellipse cx="38" cy="22" rx="12" ry="5" transform="rotate(-20 38 22)"/><ellipse cx="112" cy="36" rx="12" ry="5" transform="rotate(-20 112 36)"/><ellipse cx="55" cy="38" rx="10" ry="4" transform="rotate(25 55 38)"/><ellipse cx="96" cy="20" rx="10" ry="4" transform="rotate(25 96 20)"/></g><g transform="translate(75 28) scale(0.7)"><g fill="#E7B3A3" opacity="0.9"><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(0)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(72)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(144)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(216)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(288)"/></g><g fill="#D4877A" opacity="0.8"><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(36)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(108)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(180)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(252)"/><ellipse cx="0" cy="-9" rx="8" ry="12" transform="rotate(324)"/></g><circle r="5" fill="#8C3B2E"/></g><g transform="translate(22 28) scale(0.38)"><g fill="#C97A4F" opacity="0.9"><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(0)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(72)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(144)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(216)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(288)"/></g><circle r="5" fill="#7A2E26"/></g><g transform="translate(128 28) scale(0.38)"><g fill="#C97A4F" opacity="0.9"><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(0)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(72)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(144)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(216)"/><ellipse cx="0" cy="-17" rx="14" ry="20" transform="rotate(288)"/></g><circle r="5" fill="#7A2E26"/></g><g fill="#F2DDC4" stroke="#C9A27E" stroke-width="0.7"><circle cx="8" cy="30" r="3"/><circle cx="142" cy="26" r="3"/></g></svg><span style="flex: 1; height: 1px; background: linear-gradient(90deg, #B4733C, transparent)"></span></div>
+<div aria-hidden="true" style="display: flex; align-items: center; justify-content: center; gap: 14px; max-width: 520px; margin: 0 auto; padding: 0 30px"><span style="flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #B4733C)"></span><svg width="150" height="56" viewBox="0 0 150 56"><g fill="none" stroke="#8C5A33" stroke-width="1.3" stroke-linecap="round"><path d="M6 30 C40 22 60 34 75 29 C90 24 110 34 144 27"/></g><path transform="translate(18 27) rotate(-150)" fill="#A39B74" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(26 26) rotate(155)" fill="#7F7E5C" d="M0 0 C 3.2 -5.5, 9.8 -5.5, 13 0 C 9.8 3.8, 3.2 3.8, 0 0Z"/><path transform="translate(36 25) rotate(-145)" fill="#B97A3B" d="M0 0 C 4.2 -7.1, 12.8 -7.1, 17 0 C 12.8 5.0, 4.2 5.0, 0 0Z"/><path transform="translate(46 27) rotate(150)" fill="#9C4A2C" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(56 31) rotate(-160)" fill="#CFA56B" d="M0 0 C 3.5 -5.9, 10.5 -5.9, 14 0 C 10.5 4.1, 3.5 4.1, 0 0Z"/><path transform="translate(132 28) rotate(-30)" fill="#A39B74" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(124 29) rotate(25)" fill="#7F7E5C" d="M0 0 C 3.2 -5.5, 9.8 -5.5, 13 0 C 9.8 3.8, 3.2 3.8, 0 0Z"/><path transform="translate(114 30) rotate(-35)" fill="#B97A3B" d="M0 0 C 4.2 -7.1, 12.8 -7.1, 17 0 C 12.8 5.0, 4.2 5.0, 0 0Z"/><path transform="translate(104 29) rotate(30)" fill="#9C4A2C" d="M0 0 C 3.8 -6.3, 11.2 -6.3, 15 0 C 11.2 4.4, 3.8 4.4, 0 0Z"/><path transform="translate(94 27) rotate(-20)" fill="#CFA56B" d="M0 0 C 3.5 -5.9, 10.5 -5.9, 14 0 C 10.5 4.1, 3.5 4.1, 0 0Z"/><path transform="translate(75 30) rotate(-150)" fill="#B97A3B" d="M0 0 C 5.5 -7.9, 16.5 -7.9, 22 0 C 16.5 5.5, 5.5 5.5, 0 0Z"/><path transform="translate(75 30) rotate(-120)" fill="#9C4A2C" d="M0 0 C 6.0 -8.6, 18.0 -8.6, 24 0 C 18.0 6.0, 6.0 6.0, 0 0Z"/><path transform="translate(75 30) rotate(-90)" fill="#7F7E5C" d="M0 0 C 6.5 -9.4, 19.5 -9.4, 26 0 C 19.5 6.6, 6.5 6.6, 0 0Z"/><path transform="translate(75 30) rotate(-60)" fill="#9C4A2C" d="M0 0 C 6.0 -8.6, 18.0 -8.6, 24 0 C 18.0 6.0, 6.0 6.0, 0 0Z"/><path transform="translate(75 30) rotate(-30)" fill="#B97A3B" d="M0 0 C 5.5 -7.9, 16.5 -7.9, 22 0 C 16.5 5.5, 5.5 5.5, 0 0Z"/><path transform="translate(75 30) rotate(-165)" fill="#CFA56B" d="M0 0 C 4.0 -5.8, 12.0 -5.8, 16 0 C 12.0 4.0, 4.0 4.0, 0 0Z"/><path transform="translate(75 30) rotate(-15)" fill="#CFA56B" d="M0 0 C 4.0 -5.8, 12.0 -5.8, 16 0 C 12.0 4.0, 4.0 4.0, 0 0Z"/><g fill="#8E3B22"><circle cx="66" cy="33" r="2.3"/><circle cx="84" cy="33" r="2.3"/><circle cx="62" cy="36" r="1.8"/><circle cx="88" cy="36" r="1.8"/></g></svg><span style="flex: 1; height: 1px; background: linear-gradient(90deg, #B4733C, transparent)"></span></div>
 <section id="together" style="position: relative; padding: 48px 20px 30px; display: flex; flex-direction: column; align-items: center; gap: 18px">
 <img class="fl fl-s" src="fl-c-l.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" style="left: 0; top: -60px; width: 200px">
-<img class="fl fl-wide" src="fl-a-l.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" style="left: 0; top: 260px; width: 270px">
-<img class="fl fl-wide" src="fl-b-r.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" style="right: 0; top: 330px; width: 210px">
+<img class="fl fl-mid" src="fl-a-l.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" style="left: 0; top: 230px; width: 230px">
 <img class="fl fl-s fl-end" src="fl-a-r.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" style="right: 0; bottom: 0; width: 170px">
-<h2 style="margin: 0; font-family: 'Great Vibes', cursive; font-weight: 400; font-size: 52px; color: #7A2E26">Together</h2>
+<h2 style="margin: 0; font-family: 'Great Vibes', cursive; font-weight: 400; font-size: clamp(38px, 10.5vw, 56px); line-height: 1.15; text-align: center; white-space: nowrap; color: #7A2E26">We said cheese :D</h2>
+<div style="width: 100%; max-width: 1100px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-top: 10px">
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 16px; align-items: center">
 <div id="chapters" style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center"></div>
-<div style="width: 100%; max-width: 1000px; display: flex; flex-direction: column; gap: 14px; align-items: center">
-<div class="taped"><img data-img="tog" src="" alt="" style="width: 100%; max-width: 520px; aspect-ratio: 4 / 5; box-sizing: border-box; border: 10px solid #FFFAF2; box-shadow: 0 8px 22px rgba(74,52,38,0.18); display: block; object-fit: cover; background: #E8D7C1"></div>
-<div style="display: flex; align-items: center; gap: 14px"><button type="button" data-act="tog.prev" aria-label="Previous photo" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #7A2E26; background: transparent; color: #7A2E26; font-size: 24px">‹</button><span style="font-size: 16px; letter-spacing: 2px"><span data-v="tog.pos"></span></span><button type="button" data-act="tog.next" aria-label="Next photo" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #7A2E26; background: transparent; color: #7A2E26; font-size: 24px">›</button></div>
+<div class="taped"><img data-img="tog" src="" alt="" style="width: 100%; max-width: 460px; aspect-ratio: 4 / 5; box-sizing: border-box; border: 10px solid #FFFAF2; box-shadow: 0 8px 22px rgba(74,52,38,0.18); display: block; object-fit: cover; background: #E8D7C1"></div>
+</div>
+<article style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: #6B4A36">Our story</p>
+<h3 style="margin: 0; font-family: 'Great Vibes', cursive; font-weight: 400; font-size: clamp(34px, 9.5vw, 46px); line-height: 1.1; white-space: nowrap; color: #7A2E26">Happily-ever-onward</h3>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">It started at work in May 2024. Neither of us knew that an ordinary workplace acquaintance would eventually turn into our most important collaborative project. There was no grand cinematic moment, no carefully written script, and certainly no indication that we were signing up for a lifetime of each other's company.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">But somewhere between conversations that ran a little longer than necessary, shared meals, city explorations and finding increasingly more reasons to spend time together, something began to take shape.</p>
+<div id="our-more" hidden>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 19px; line-height: 1.6">By January 2025, we had decided to give this relationship a name.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">We came from different places, spoke different languages, grew up with different cultural references and had our own ways of looking at the world. On paper, we had enough differences to keep a comparison chart busy. In practice, we discovered that we didn't need to agree on everything to get along, and certainly didn't need to become the same person to build something meaningful together.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">What followed was a rather lovely collection of ordinary and extraordinary moments. Discovering each other's worlds, introducing each other to familiar foods, films and music, exploring cities, exchanging cultural references, sharing coffee, Sunday dosas and long conversations about just about everything. There have been new experiences, old habits, occasional disagreements, plenty of laughter and the ongoing discovery that two people can approach the same situation in entirely different ways and still find their way to each other.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">Over time, we became part of each other's routines, plans and imagined futures. We learnt that companionship isn't always about grand gestures or perfectly timed declarations. Sometimes it is about showing up, making room for each other's individuality, remembering the little things, looking after one another and having someone with whom even the most uneventful day feels worth sharing.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">We've grown individually and together. We've learnt to navigate differences without having to erase them, to make compromises without losing ourselves, and to understand that building a life together is less about having everything figured out and more about being willing to figure things out together.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">And somewhere along the way, marriage stopped being an abstract idea and became something we genuinely wanted for ourselves. Not because we had arrived at some perfect version of life, but because we found someone with whom we wanted to take on all its unpredictability.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">So, here we are.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">On November 20, 2026, we're making it official. What began as an ordinary meeting has turned into a shared future, and what was once an unexpected plot twist is now a decision we're making wholeheartedly.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">This isn't quite a happily-ever-after. We prefer to think of it as happily-ever-onward.</p>
+<p style="margin: 0; font-size: 19px; line-height: 1.6">No final submission date, no fixed syllabus, no promise that everything will go according to plan. Just two people, one shared future, plenty of stories still to tell, and a lifetime of learning along the way.</p>
+<p style="margin: 0; font-size: 23px; line-height: 1.45; font-style: italic; color: #7A2E26">We're glad you're here to celebrate the next chapter with us. After all, every good story deserves a few familiar faces in the audience.</p>
+</div>
+</div>
+<button type="button" data-act="toggleOur" style="align-self: flex-start; min-height: 46px; padding: 0 22px; border: 1px solid #7A2E26; border-radius: 999px; background: transparent; color: #7A2E26; font-family: inherit; font-size: 17px"><span data-v="ourBtn"></span></button>
+</article>
 </div>
 <div aria-hidden="true" style="margin-top: 16px; width: 92px; height: 92px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #A2463A, #7A2E26 55%, #5A1F19); box-shadow: 0 4px 10px rgba(90,31,25,0.35), inset 0 0 0 6px rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center"><div style="width: 70px; height: 70px; border-radius: 50%; border: 1px dashed rgba(245,235,221,0.55); display: flex; align-items: center; justify-content: center; font-family: 'Great Vibes', cursive; font-size: 36px; color: #F5EBDD">JC</div></div>
 <p style="margin: 8px 0 0; font-family: 'Great Vibes', cursive; font-size: 40px; color: #7A2E26">Here’s to forever</p>
@@ -201,7 +218,9 @@ img{max-width:100%}
   var photos = { hero: P([12, 4, 11, 27, 21, 32, 43, 7, 44]), her: P([40, 2, 26, 23, 5, 31, 33, 42]), his: P([29, 28, 34, 36, 35, 37]) };
   var chapters = [{ name: 'Travels', list: P([0, 6, 13, 15, 16, 17, 18, 19, 30, 20, 22, 41, 8]) }, { name: 'Nights out', list: P([1, 24, 3, 38, 39, 45, 46, 47, 48]) }, { name: 'Little moments', list: P([9, 14, 10, 25]) }];
   var names = { hero: 'Jennifer and Charan', her: 'Jennifer', his: 'Charan' };
-  var s = { hero: 0, her: 0, his: 0, tog: 0, chapter: 0, music: false, opened: false, auto: true, herOpen: false, hisOpen: false };
+  var s = { hero: 0, her: 0, his: 0, tog: 0, chapter: 0, music: false, auto: true, herOpen: false, hisOpen: false, ourOpen: false };
+  var KEYS = ['hero', 'her', 'his', 'tog'], hold = { hero: 0, her: 0, his: 0, tog: 0 }, visible = {}, userPaused = false;
+  function touch(k) { hold[k] = Date.now() + 9000; }
   var audio = document.getElementById('jc-bgm');
   function list(k) { return k === 'tog' ? chapters[s.chapter].list : photos[k]; }
   function go(k, d) { var c = list(k).length; s[k] = (s[k] + d + c) % c; render(); }
@@ -212,65 +231,85 @@ img{max-width:100%}
     render();
   }
   var acts = {
-    toggleMusic: function () { setMusic(!s.music); },
+    toggleMusic: function () { userPaused = s.music; stopAutoStart(); setMusic(!s.music); },
     toggleAuto: function () { s.auto = !s.auto; render(); },
     toggleHer: function () { s.herOpen = !s.herOpen; render(); },
+    toggleOur: function () { s.ourOpen = !s.ourOpen; render(); },
     toggleHis: function () { s.hisOpen = !s.hisOpen; render(); }
   };
   ['hero', 'her', 'his', 'tog'].forEach(function (k) {
-    acts[k + '.prev'] = function () { if (k === 'hero') s.auto = false; go(k, -1); };
-    acts[k + '.next'] = function () { if (k === 'hero') s.auto = false; go(k, 1); };
+    acts[k + '.prev'] = function () { touch(k); go(k, -1); };
+    acts[k + '.next'] = function () { touch(k); go(k, 1); };
   });
   document.querySelectorAll('[data-act]').forEach(function (el) {
     el.addEventListener('click', function () { var f = acts[el.getAttribute('data-act')]; if (f) f(); });
   });
-  // swipe on photos
+  // swipe on photos: horizontal swipes change photo, vertical ones still scroll the page
   document.querySelectorAll('[data-img]').forEach(function (img) {
-    var x0 = null, k = img.getAttribute('data-img');
-    img.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
-    img.addEventListener('touchend', function (e) {
-      if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
-      if (Math.abs(dx) > 40) { if (k === 'hero') s.auto = false; go(k, dx < 0 ? 1 : -1); }
-    });
+    var k = img.getAttribute('data-img'), box = img.parentNode, x0 = null, y0 = 0;
+    img.setAttribute('draggable', 'false'); box.style.touchAction = 'pan-y';
+    box.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+    box.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null;
+      if (Math.abs(dx) > 30 && Math.abs(dx) > Math.abs(dy) * 1.2) { touch(k); go(k, dx < 0 ? 1 : -1); }
+    }, { passive: true });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { es.forEach(function (en) { visible[k] = en.isIntersecting; }); }, { threshold: 0.35 }).observe(img);
+    else visible[k] = true;
   });
-  var dotsEl = document.getElementById('hero-dots'), chapEl = document.getElementById('chapters');
+  var chapEl = document.getElementById('chapters');
   function render() {
     var v = {
       musicText: s.music ? '♪ Music on' : '♪ Music off',
       autoText: s.auto ? 'Pause slideshow' : 'Play slideshow',
       herBtn: s.herOpen ? 'Show less' : 'Read her full story',
+      ourBtn: s.ourOpen ? 'Show less' : 'Read our full story',
       hisBtn: s.hisOpen ? 'Show less' : 'Read his full story'
     };
     ['hero', 'her', 'his', 'tog'].forEach(function (k) {
       var l = list(k); v[k + '.pos'] = (s[k] + 1) + ' / ' + l.length;
       document.querySelectorAll('[data-img="' + k + '"]').forEach(function (img) {
-        img.src = l[s[k]];
+        var nsrc = l[s[k]]; if (img.getAttribute('src') !== nsrc) { img.classList.remove('jc-fade'); void img.offsetWidth; img.classList.add('jc-fade'); img.src = nsrc; }
         img.alt = (k === 'tog' ? 'Jennifer and Charan, ' + chapters[s.chapter].name : names[k]) + ', photo ' + (s[k] + 1) + ' of ' + l.length;
       });
     });
     document.querySelectorAll('[data-v]').forEach(function (el) { var key = el.getAttribute('data-v'); if (key in v) el.textContent = v[key]; });
-    var mb = document.querySelector('[data-act="toggleMusic"]'); mb.setAttribute('aria-label', s.music ? 'Pause music' : 'Play music');
     document.getElementById('her-more').hidden = !s.herOpen;
+    document.getElementById('our-more').hidden = !s.ourOpen;
+    document.querySelector('[data-act="toggleOur"]').setAttribute('aria-expanded', s.ourOpen);
     document.getElementById('his-more').hidden = !s.hisOpen;
     document.querySelector('[data-act="toggleHer"]').setAttribute('aria-expanded', s.herOpen);
     document.querySelector('[data-act="toggleHis"]').setAttribute('aria-expanded', s.hisOpen);
-    dotsEl.innerHTML = '';
-    photos.hero.forEach(function (_, j) {
-      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Go to photo ' + (j + 1));
-      b.style.cssText = 'width:24px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer';
-      var d = document.createElement('span');
-      d.style.cssText = 'display:block;width:11px;height:11px;border-radius:50%;border:1px solid #7A2E26;background:' + (j === s.hero ? '#7A2E26' : 'transparent');
-      b.appendChild(d); b.onclick = function () { s.hero = j; s.auto = false; render(); }; dotsEl.appendChild(b);
-    });
     chapEl.innerHTML = '';
     chapters.forEach(function (c, k) {
       var b = document.createElement('button'); b.type = 'button'; b.textContent = c.name; b.setAttribute('aria-pressed', k === s.chapter);
       b.style.cssText = 'min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #7A2E26;font-family:inherit;font-size:17px;cursor:pointer;' + (k === s.chapter ? 'background:#7A2E26;color:#F5EBDD' : 'background:transparent;color:#7A2E26');
-      b.onclick = function () { s.chapter = k; s.tog = 0; render(); }; chapEl.appendChild(b);
+      b.onclick = function () { s.chapter = k; s.tog = 0; touch('tog'); render(); }; chapEl.appendChild(b);
     });
     preloadNext();
   }
-  setInterval(function () { if (s.auto && !document.hidden) go('hero', 1); }, 4000);
+  var lastTick = { hero: 0, her: 1300, his: 2600, tog: 3900 }, START = Date.now();
+  setInterval(function () {
+    if (document.hidden) return;
+    var now = Date.now();
+    KEYS.forEach(function (k) {
+      if (k === 'hero' && !s.auto) return;
+      if (now < hold[k] || !visible[k]) return;
+      if (now - START - lastTick[k] >= 4500) { lastTick[k] = now - START; go(k, 1); }
+    });
+  }, 250);
+  // music: browsers only allow sound after the visitor's first tap, so try now and again on the first tap anywhere
+  var AUTO_EVENTS = ['pointerup', 'touchend', 'click', 'keydown'];
+  function autoStart(e) {
+    if (userPaused || s.music) { stopAutoStart(); return; }
+    if (e && e.target && e.target.closest && e.target.closest('[data-act="toggleMusic"]')) return;
+    audio.volume = 0.6;
+    var p = audio.play();
+    if (p && p.then) p.then(function () { s.music = true; stopAutoStart(); render(); }).catch(function () {});
+  }
+  function stopAutoStart() { AUTO_EVENTS.forEach(function (ev) { document.removeEventListener(ev, autoStart, true); }); }
+  AUTO_EVENTS.forEach(function (ev) { document.addEventListener(ev, autoStart, true); });
+  autoStart();
   function preloadNext() { ['hero', 'her', 'his', 'tog'].forEach(function (k) { var l = list(k); new Image().src = l[(s[k] + 1) % l.length]; }); }
   render();
   window.addEventListener('load', preloadNext);
@@ -279,3 +318,5 @@ img{max-width:100%}
 </script>
 </body>
 </html>
+
+</body></html>
