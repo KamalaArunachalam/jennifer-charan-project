@@ -175,10 +175,9 @@ img{max-width:100%}
 <img class="fl fl-s" src="fl-c-l.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" style="left: 0; top: -60px; width: 200px">
 <img class="fl fl-mid" src="fl-a-l.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" style="left: 0; top: 230px; width: 230px">
 <img class="fl fl-s fl-end" src="fl-a-r.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" style="right: 0; bottom: 0; width: 170px">
-<h2 style="margin: 0; font-family: 'Great Vibes', cursive; font-weight: 400; font-size: clamp(38px, 10.5vw, 56px); line-height: 1.15; text-align: center; white-space: nowrap; color: #7A2E26">We said cheese :D</h2>
+<h2 style="margin: 0; font-family: 'Great Vibes', cursive; font-weight: 400; font-size: clamp(38px, 10.5vw, 56px); line-height: 1.15; text-align: center; white-space: nowrap; color: #7A2E26">We said cheese !!!</h2>
 <div style="width: 100%; max-width: 1100px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; margin-top: 10px">
 <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 16px; align-items: center">
-<div id="chapters" style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center"></div>
 <div class="taped"><img data-img="tog" src="" alt="" style="width: 100%; max-width: 460px; aspect-ratio: 4 / 5; box-sizing: border-box; border: 10px solid #FFFAF2; box-shadow: 0 8px 22px rgba(74,52,38,0.18); display: block; object-fit: cover; background: #E8D7C1"></div>
 </div>
 <article style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
@@ -216,7 +215,7 @@ img{max-width:100%}
 (function () {
   var P = function (a) { return a.map(function (i) { return 'jc-' + (i < 10 ? '0' : '') + i + '.jpg'; }); };
   var photos = { hero: P([12, 4, 11, 27, 21, 32, 43, 7, 44]), her: P([40, 2, 26, 23, 5, 31, 33, 42]), his: P([29, 28, 34, 36, 35, 37]) };
-  var chapters = [{ name: 'Travels', list: P([0, 6, 13, 15, 16, 17, 18, 19, 30, 20, 22, 41, 8]) }, { name: 'Nights out', list: P([1, 24, 3, 38, 39, 45, 46, 47, 48]) }, { name: 'Little moments', list: P([9, 14, 10, 25]) }];
+  var chapters = [{ name: 'together', list: P([0, 6, 13, 15, 16, 17, 18, 19, 30, 20, 22, 41, 8, 1, 24, 3, 38, 39, 45, 46, 47, 48, 9, 14, 10, 25]) }];
   var names = { hero: 'Jennifer and Charan', her: 'Jennifer', his: 'Charan' };
   var s = { hero: 0, her: 0, his: 0, tog: 0, chapter: 0, music: false, auto: true, herOpen: false, hisOpen: false, ourOpen: false };
   var KEYS = ['hero', 'her', 'his', 'tog'], hold = { hero: 0, her: 0, his: 0, tog: 0 }, visible = {}, userPaused = false;
@@ -257,7 +256,6 @@ img{max-width:100%}
     if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { es.forEach(function (en) { visible[k] = en.isIntersecting; }); }, { threshold: 0.35 }).observe(img);
     else visible[k] = true;
   });
-  var chapEl = document.getElementById('chapters');
   function render() {
     var v = {
       musicText: s.music ? '♪ Music on' : '♪ Music off',
@@ -270,7 +268,7 @@ img{max-width:100%}
       var l = list(k); v[k + '.pos'] = (s[k] + 1) + ' / ' + l.length;
       document.querySelectorAll('[data-img="' + k + '"]').forEach(function (img) {
         var nsrc = l[s[k]]; if (img.getAttribute('src') !== nsrc) { img.classList.remove('jc-fade'); void img.offsetWidth; img.classList.add('jc-fade'); img.src = nsrc; }
-        img.alt = (k === 'tog' ? 'Jennifer and Charan, ' + chapters[s.chapter].name : names[k]) + ', photo ' + (s[k] + 1) + ' of ' + l.length;
+        img.alt = (k === 'tog' ? 'Jennifer and Charan' : names[k]) + ', photo ' + (s[k] + 1) + ' of ' + l.length;
       });
     });
     document.querySelectorAll('[data-v]').forEach(function (el) { var key = el.getAttribute('data-v'); if (key in v) el.textContent = v[key]; });
@@ -280,12 +278,6 @@ img{max-width:100%}
     document.getElementById('his-more').hidden = !s.hisOpen;
     document.querySelector('[data-act="toggleHer"]').setAttribute('aria-expanded', s.herOpen);
     document.querySelector('[data-act="toggleHis"]').setAttribute('aria-expanded', s.hisOpen);
-    chapEl.innerHTML = '';
-    chapters.forEach(function (c, k) {
-      var b = document.createElement('button'); b.type = 'button'; b.textContent = c.name; b.setAttribute('aria-pressed', k === s.chapter);
-      b.style.cssText = 'min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #7A2E26;font-family:inherit;font-size:17px;cursor:pointer;' + (k === s.chapter ? 'background:#7A2E26;color:#F5EBDD' : 'background:transparent;color:#7A2E26');
-      b.onclick = function () { s.chapter = k; s.tog = 0; touch('tog'); render(); }; chapEl.appendChild(b);
-    });
     preloadNext();
   }
   var lastTick = { hero: 0, her: 1300, his: 2600, tog: 3900 }, START = Date.now();
